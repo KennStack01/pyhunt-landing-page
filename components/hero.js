@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import BlueButton from './Buttons/BlueButton'
+import { useRouter } from 'next/router'
 
 const Hero = () => {
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
+
+  const router = useRouter()
 
   const subscribeMe = async (event) => {
     event.preventDefault()
@@ -21,6 +24,7 @@ const Hero = () => {
     } else {
       setSuccess(message)
       setEmail('')
+      router.push('/success')
     }
   }
 
