@@ -1,6 +1,33 @@
+import React, { useState, useEffect } from 'react'
 import BlueButton from './Buttons/BlueButton'
 
 const Hero = () => {
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
+
+  const subscribeMe = async (event) => {
+    event.preventDefault()
+
+    const res = await fetch('/api/subscribe', {
+      body: JSON.stringify({ email: email }),
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+    })
+
+    const { error, message } = await res.json()
+    if (error) {
+      setError(error)
+    } else {
+      setSuccess(message)
+    }
+  }
+
+  const changeEmail = (event) => {
+    const email = event.target.value
+    setEmail(email)
+  }
+
   return (
     <div className="mx-auto my-6 flex flex-col justify-between rounded-sm p-4 text-center md:my-8 lg:mx-10">
       <div className="my-auto mx-auto w-full md:w-5/6">
@@ -20,12 +47,17 @@ const Hero = () => {
           <p className="my-2 text-center text-sm md:text-lg">
             We're Launching in Two Weeks. Dont'miss 👇
           </p>
-          <form action="" className=" mx-auto my-auto flex flex-row">
+          <form
+            action=""
+            onSubmit={subscribeMe}
+            className=" mx-auto my-auto flex flex-row"
+          >
             <input
               className="mx-2 block w-2/3 rounded-sm border border-gray-700 bg-gray-700 p-2 text-sm text-white placeholder-gray-400 outline-none focus:border-turbo-light-blue-500 focus:ring-turbo-light-blue-500 dark:text-white dark:focus:ring-blue-500 md:w-auto md:text-lg"
               type="email"
               name="email"
               id="email"
+              onChange={changeEmail}
               placeholder="elonmusk@twitter.com"
               required
             />
@@ -33,6 +65,15 @@ const Hero = () => {
               <BlueButton content={'Join for free'} />
             </button>
           </form>
+          {success ? (
+            <span className="flex items-center text-sm font-bold text-green-700">
+              {success}
+            </span>
+          ) : (
+            <span className="flex items-center text-sm font-bold text-red-800">
+              {error}
+            </span>
+          )}
         </div>
       </div>
     </div>
