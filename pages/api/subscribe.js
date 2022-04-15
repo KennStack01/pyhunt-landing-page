@@ -23,10 +23,9 @@ export default async (req, res) => {
       return res.status(400).json({
         error: `There was an error subscribing to the newsletter.`,
       })
-    }
-    if (response.status === 200) {
+    } else {
       return res.status(200).json({
-        message: `You have been subscribed to the newsletter.`,
+        message: `Awesome! Please, check your spam box to confirm your subscription 📩 !`,
       })
     }
 

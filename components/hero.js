@@ -20,6 +20,7 @@ const Hero = () => {
       setError(error)
     } else {
       setSuccess(message)
+      setEmail('')
     }
   }
 
@@ -57,20 +58,21 @@ const Hero = () => {
               type="email"
               name="email"
               id="email"
+              value={email}
               onChange={changeEmail}
               placeholder="elonmusk@twitter.com"
-              required
+              // required
             />
             <button type="submit" className="w-1/3 md:w-auto">
               <BlueButton content={'Join for free'} />
             </button>
           </form>
           {success ? (
-            <span className="flex items-center text-sm font-bold text-green-700">
+            <span className="mx-auto my-2 flex items-center text-sm font-semibold text-turbo-yellow-500">
               {success}
             </span>
           ) : (
-            <span className="flex items-center text-sm font-bold text-red-800">
+            <span className="mx-auto my-2 flex items-center text-sm font-semibold text-red-800">
               {error}
             </span>
           )}
