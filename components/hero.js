@@ -21,6 +21,7 @@ const Hero = () => {
     const { error, message } = await res.json()
     if (error) {
       setError(error)
+      router.push('/')
     } else {
       setSuccess(message)
       setEmail('')
