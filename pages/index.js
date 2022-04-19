@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>pyhunt | Home</title>
+        <title>pyhunt | Early Access</title>
         <link rel="icon" href="/favicon.svg" />
       </Head>
 

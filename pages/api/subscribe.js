@@ -6,7 +6,7 @@ export default async (req, res) => {
   }
 
   try {
-    const API_KEY = process.env.BUTTONDOWN_API_KEY
+    const API_KEY = process.env.NEXT_PUBLIC_BUTTONDOWN_API_KEY
     const response = await fetch(
       `https://api.buttondown.email/v1/subscribers`,
       {
@@ -23,13 +23,12 @@ export default async (req, res) => {
       return res.status(400).json({
         error: `There was an error subscribing to the newsletter.`,
       })
-    } else {
-      return res.status(200).json({
-        message: `Awesome! Please, check your spam box to confirm your subscription 📩 !`,
-      })
     }
 
-    return res.status(201).json({ error: '' })
+    return res.status(201).json({
+      error: '',
+      message: `Awesome! Please, check your spam box to confirm your subscription 📩 !`,
+    })
   } catch (error) {
     return res.status(500).json({ error: error.message || error.toString() })
   }
