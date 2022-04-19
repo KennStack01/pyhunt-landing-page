@@ -15,17 +15,18 @@ const Home = () => {
 
       <Layout>
         <h1 className="mx-auto my-10 text-center text-2xl font-bold lg:px-28 lg:text-3xl xl:text-5xl">
-          Awesome! Please, check your email box to confirm your subscription !
+          Awesome! See you soon ! We're Cooking something for you :)
+          {/* Awesome! Please, check your email box to confirm your subscription ! */}
         </h1>
 
-        <div className="mx-auto text-center text-sm">
+        {/* <div className="mx-auto text-center text-sm">
           <span>
             If you don't see issues of Pyhunt Newsletter in your inbox, be sure
             to check:
           </span>{' '}
           <br />
           Your Promotions tab, if you're using Gmail or Your spam folder
-        </div>
+        </div> */}
 
         {/* <div className="mx-auto my-7 w-1/3 text-center md:w-1/6">
           <Link href="/">

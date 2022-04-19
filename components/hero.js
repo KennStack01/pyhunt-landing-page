@@ -54,10 +54,21 @@ const Hero = () => {
             We're Launching in Two Weeks. Dont'miss 👇
           </p>
           <form
-            action=""
-            onSubmit={subscribeMe}
+            action="https://formsubmit.co/kibadikennedy@gmail.com"
+            method="POST"
+            // onSubmit={subscribeMe}
             className=" mx-auto my-auto flex flex-row"
           >
+            <input
+              type="hidden"
+              name="_subject"
+              value="pyhunt - New Subscriber!"
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://www.pyhunt.com/success"
+            />
             <input
               className="mx-2 block w-2/3 rounded-sm border border-gray-700 bg-gray-700 p-2 text-sm text-white placeholder-gray-400 outline-none focus:border-turbo-light-blue-500 focus:ring-turbo-light-blue-500 dark:text-white dark:focus:ring-blue-500 md:w-auto md:text-lg"
               type="email"
