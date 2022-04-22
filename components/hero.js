@@ -77,7 +77,7 @@ const Hero = () => {
               value={email}
               onChange={changeEmail}
               placeholder="elonmusk@twitter.com"
-              // required
+              required
             />
             <button type="submit" className="w-1/3 md:w-auto">
               <BlueButton content={'Join for free'} />
