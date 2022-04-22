@@ -54,7 +54,7 @@ const Hero = () => {
             We're Launching in Two Weeks. Dont'miss 👇
           </p>
           <form
-            action="https://formsubmit.co/kibadikennedy@gmail.com"
+            action="https://formsubmit.co/ade66b518b0d46ef6f40dcb8f0e0efd5"
             method="POST"
             // onSubmit={subscribeMe}
             className=" mx-auto my-auto flex flex-row"
