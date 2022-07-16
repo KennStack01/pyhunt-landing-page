@@ -67,7 +67,7 @@ const Hero = () => {
             <input
               type="hidden"
               name="_next"
-              value="https://www.pyhunt.com/success"
+              value="https://join.pyhunt.com/success"
             />
             <input
               className="mx-2 block w-2/3 rounded-sm border border-gray-700 bg-gray-700 p-2 text-sm text-white placeholder-gray-400 outline-none focus:border-turbo-light-blue-500 focus:ring-turbo-light-blue-500 dark:text-white dark:focus:ring-blue-500 md:w-auto md:text-lg"
