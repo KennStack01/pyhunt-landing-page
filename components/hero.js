@@ -38,7 +38,7 @@ const Hero = () => {
     <div className="mx-auto my-6 flex flex-col justify-between rounded-sm p-4 text-center md:my-8 lg:mx-10">
       <div className="my-auto mx-auto w-full md:w-5/6">
         <h1 className="text-4xl font-bold lg:px-28 lg:text-3xl xl:text-5xl">
-          Python Jobs made simple to access and apply to
+          Python Jobs made simple to access and apply
         </h1>
         <div className="mx-auto flex w-full flex-col justify-between">
           <p className="mx-auto my-6 px-2 text-center text-xs font-semibold md:text-lg">
